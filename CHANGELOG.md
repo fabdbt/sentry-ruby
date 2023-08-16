@@ -11,7 +11,8 @@
   config.trace_propagation_targets = [/example.com/, 'foobar.org/api/v2']
   ```
 - Tracing without Performance
-  - Implement `PropagationContext` on `Scope` and add `Sentry.get_trace_propagation_headers` API [#2084](https://github.com/getsentry/sentry-ruby/pull/2084)
+  - Implement `PropagationContext` on `Scope` and add new `Sentry.get_trace_propagation_headers` API [#2084](https://github.com/getsentry/sentry-ruby/pull/2084)
+  - Add new `Sentry.continue_trace` API [#2089](https://github.com/getsentry/sentry-ruby/pull/2089)
 
   The SDK now supports connecting arbitrary events (Errors / Transactions / Replays) across distributed services and not just Transactions.  
   To continue an incoming trace starting with this version of the SDK, use `Sentry.continue_trace` as follows.
